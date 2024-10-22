@@ -2,8 +2,8 @@
   <v-container class="fill-height">
      <v-row>
       <v-col  v-for="(n,index) in arreglo" :key="index" class="d-flex child-flex" cols="3">
-        <v-card class="mx-auto pa-2" max-width="300">
-          <v-img height="250" width="300" :src="n.images.original.url"></v-img>
+        <v-card class="mx-auto pa-2 " style="background:hsl(351, 54%, 95%);" max-width="300" >
+          <v-img height="250" width="250" :src="n.images.original.url"></v-img>
           <v-card-item>
            <v-card-title>{{n.type}}</v-card-title>
            <v-card-subtitle >
@@ -42,4 +42,8 @@ onMounted(consumirapi)
 watch(() => props.personaje,consumirapi )
 </script>
 <style scoped>
+tr{
+  color:hsl(351, 54%, 95%);
+}
+
 </style>
